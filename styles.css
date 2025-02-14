@@ -42,11 +42,18 @@ body {
 
 /* Hide Main Content Initially */
 #main-content {
-    display: none; /* Initially hidden */
+    visibility: hidden; /* Use visibility instead of display */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+#main-content.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .show {
     display: block !important;
