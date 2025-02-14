@@ -3,63 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinivas Portfolio</title>
+    <title>Srinivas Kurukunda | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Srinivas Kurukunda</h1>
-        <p>AI & Data Science Enthusiast | Aspiring Software Engineer</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu" class="hidden">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <button id="dark-mode-toggle">Dark Mode</button> <!-- Dark Mode Button -->
     </header>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate AI and Data Science enthusiast with experience in building intelligent solutions. I love solving complex problems and learning new technologies.</p>
-        <a href="your-resume-link.pdf" class="btn" target="_blank" download>Download Resume</a> <!-- Resume Button -->
+    <section id="hero" class="hero-section">
+        <h1>Srinivas Kurukunda</h1>
+        <p>AI & Data Science Enthusiast | Aspiring Software Engineer</p>
+        <button onclick="downloadResume()">Download Resume</button>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
     </section>
-    
+
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project-card">
             <h3>Public Transport Analysis</h3>
-            <p>Developed a data-driven analysis project to optimize public transport routes.</p>
+            <p>Developed a data-driven analysis project to optimize public transport routes using Python, Pandas, and visualization tools.</p>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>AI-Powered Chatbot</h3>
-            <p>Built a chatbot using NLP to automate customer interactions.</p>
+            <p>Built a chatbot using NLP and deep learning techniques, enhancing customer service automation.</p>
+        </div>
+        <div class="project-card">
+            <h3>Sentiment Analysis System</h3>
+            <p>Implemented a machine learning model to analyze sentiments from Twitter data, achieving 85% accuracy.</p>
         </div>
     </section>
-    
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Python, Java, SQL</li>
-            <li>Machine Learning & AI</li>
-            <li>Power BI, Data Analytics</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:srinusb000@gmail.com">srinusb000@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Srinivas0807" target="_blank">github.com/Srinivas0807</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/kurukunda-srinivas-56689426a" target="_blank">linkedin.com/in/kurukunda-srinivas</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Srinivas Kurukunda. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script> <!-- Linking JavaScript -->
 </body>
 </html>
