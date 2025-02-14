@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srinivas Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
         <h1>Srinivas Kurukunda</h1>
         <p>AI & Data Science Enthusiast | Aspiring Software Engineer</p>
@@ -19,36 +19,33 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
         <h2>Welcome to My Portfolio</h2>
         <p>Passionate about AI, Data Science, and Software Engineering</p>
-        <a href="#contact" class="button">Get in Touch</a>
+        <a href="#contact" class="btn">Get in Touch</a>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm an AI and Data Science enthusiast with experience in building intelligent solutions. I love solving complex problems and learning new technologies.</p>
+        <p>I'm a passionate AI and Data Science enthusiast with experience in building intelligent solutions. I love solving complex problems and learning new technologies.</p>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-card">
+        <div class="project">
             <h3>Public Transport Analysis</h3>
             <p>Developed a data-driven analysis project to optimize public transport routes.</p>
         </div>
-        <div class="project-card">
+        <div class="project">
             <h3>AI-Powered Chatbot</h3>
             <p>Built a chatbot using NLP to automate customer interactions.</p>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
@@ -59,7 +56,6 @@
         </ul>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:srinusb000@gmail.com">srinusb000@gmail.com</a></p>
@@ -67,16 +63,8 @@
         <p>LinkedIn: <a href="https://www.linkedin.com/in/kurukunda-srinivas-56689426a" target="_blank">linkedin.com/in/kurukunda-srinivas</a></p>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Srinivas Kurukunda. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for Dark Mode -->
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-    </script>
 </body>
 </html>
