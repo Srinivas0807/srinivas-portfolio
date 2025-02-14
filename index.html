@@ -3,42 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinivas Kurukunda | Portfolio</title>
+    <title>Srinivas Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <nav id="nav-menu" class="hidden">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <section id="hero" class="hero-section">
         <h1>Srinivas Kurukunda</h1>
         <p>AI & Data Science Enthusiast | Aspiring Software Engineer</p>
-        <button onclick="downloadResume()">Download Resume</button>
-        <button onclick="toggleDarkMode()">Dark Mode</button>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Academic projects">Academic Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button> <!-- Dark Mode Button -->
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Results-driven Software Engineer with expertise in scalable systems, AI-driven solutions, and full-stack development. Experienced in managing fast-paced development cycles and collaborating with cross-functional teams to deliver high-impact software solutions. Proficient in Agile and Scrum methodologies, ensuring efficient software delivery. Passionate about machine learning, cloud computing, and distributed systems.</p>
+        <a href="your-resume-link.pdf" class="btn" target="_blank" download>Download Resume</a> <!-- Resume Button -->
     </section>
-
-    <section id="projects">
+    
+    <section id="Academic projects">
         <h2>Projects</h2>
-        <div class="project-card">
+        <div class="Academic project">
             <h3>Public Transport Analysis</h3>
-            <p>Developed a data-driven analysis project to optimize public transport routes using Python, Pandas, and visualization tools.</p>
+            <p>•	Developed a real-time transport analytics system to optimize 500+ bus routes.
+               •	Used Scikit-learn for predictive modeling, improving route efficiency by 25%.
+               •	Built interactive Power BI dashboards, enabling city planners to make data-driven decisions.
+</p>
         </div>
-        <div class="project-card">
-            <h3>AI-Powered Chatbot</h3>
-            <p>Built a chatbot using NLP and deep learning techniques, enhancing customer service automation.</p>
-        </div>
-        <div class="project-card">
-            <h3>Sentiment Analysis System</h3>
-            <p>Implemented a machine learning model to analyze sentiments from Twitter data, achieving 85% accuracy.</p>
+        <div class="Academic project">
+            <h3>Election Voting System</h3>
+            <p>Built a chatbot using NLP to automate customer interactions.
+            •	Built a secure online voting system handling 10,000+ concurrent users with AES-256 encryption.
+            •	Designed a Flask & AWS-based backend, ensuring 100% vote integrity and preventing fraud.
+</p>
         </div>
     </section>
+    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, C, Scala (Learning), Golang (Learning)</li>
+            <li>Software Development: Distributed Systems, Microservices, Fault-Tolerant Solutions, TDD, BDD</li>
+            <li>Full-Stack Development: HTML, CSS, JavaScript (React.js), Node.js, Flask, Django</li>
+            <li>Databases & Big Data: SQL (Advanced Queries, Transactions, Indexing), NoSQL (MongoDB, Cassandra), Hadoop, Apache Spark</li>
+            <li>Cloud & DevOps: AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, CI/CD (Jenkins, GitHub Actions)</li>
+            <li>Machine Learning & AI: TensorFlow, Keras, Scikit-learn, NLP (Transformers, BERT), Model Deployment</li>
+            <li>Tools & Technologies: Git, Power BI, Apache Kafka, Agile, Scrum, Kanban</li>
+            <li>Soft Skills: Problem-Solving, Critical Thinking, Team Collaboration</li>
+
+
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:srinivaskurukunda@gmail.com">srinivaskurukunda@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Srinivas0807" target="_blank">github.com/Srinivas0807</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kurukunda-srinivas-56689426a" target="_blank">linkedin.com/in/kurukunda-srinivas</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Srinivas Kurukunda. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Linking JavaScript -->
 </body>
 </html>
