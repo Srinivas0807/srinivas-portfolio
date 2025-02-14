@@ -1,140 +1,111 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    transition: 0.3s ease-in-out;
-}
-
-body {
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
 }
 
-/* Header Section */
+/* Header */
 header {
-    background-color: #007bff;
+    background: #007bff;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     position: relative;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    border-bottom: 2px solid white;
 }
 
 /* Sections */
 section {
-    max-width: 900px;
-    margin: 50px auto;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
 }
 
-h2 {
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
+/* Project Cards */
 .project {
-    background: #f9f9f9;
+    background: white;
     padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.project h3 {
-    color: #333;
-}
-
-/* Contact Section */
-#contact a {
+/* Contact Links */
+a {
     color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
 }
 
 /* Download Resume Button */
-.download-resume {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
+.btn {
+    display: inline-block;
     padding: 10px 20px;
     background: #007bff;
     color: white;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
-    width: 200px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.download-resume:hover {
+.btn:hover {
     background: #0056b3;
 }
 
-/* Dark Mode Toggle */
-.dark-mode {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
 /* Dark Mode Styles */
-.dark {
-    background-color: #222;
-    color: white;
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
 }
 
-.dark header {
-    background-color: #444;
+body.dark-mode header {
+    background: #1f1f1f;
 }
 
-.dark nav ul li a {
-    color: #ddd;
-}
-
-.dark nav ul li a:hover {
-    border-bottom: 2px solid #ddd;
-}
-
-.dark section {
+body.dark-mode .project {
     background: #333;
     color: white;
 }
 
-.dark .project {
-    background: #444;
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: #ffffff;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.dark #contact a {
-    color: #80b3ff;
+#dark-mode-toggle:hover {
+    background: #e0e0e0;
 }
