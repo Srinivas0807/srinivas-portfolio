@@ -1,3 +1,9 @@
+// Welcome Page Transition
+document.getElementById("next-button").addEventListener("click", function() {
+    document.getElementById("welcome-screen").style.display = "none";
+    document.getElementById("main-content").classList.remove("hidden");
+});
+
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
@@ -29,6 +35,7 @@ const fadeInOnScroll = () => {
 
         if (sectionTop < windowHeight * 0.85) {
             section.classList.add('fade-in');
+            section.classList.add('show'); // Add show class to trigger animation
         }
     });
 };
