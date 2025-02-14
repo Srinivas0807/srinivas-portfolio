@@ -3,175 +3,71 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4 url('https://github.com/Srinivas0807/srinivas-portfolio/blob/main/Screenshot%202025-02-14%20161602.png?raw=true') no-repeat center center/cover;
+    background: #f4f4f4;
     color: #333;
-    transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
-header {
-    background: rgba(0, 123, 255, 0.9); /* Semi-transparent blue */
+/* Welcome Screen */
+#welcome-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url('https://github.com/Srinivas0807/srinivas-portfolio/blob/main/Screenshot%202025-02-14%20161602.png?raw=true') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
+#welcome-screen h1 {
+    font-size: 2.5em;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+#next-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #007bff;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+#next-button:hover {
+    background: #0056b3;
+}
+
+/* Hide Main Content Initially */
+.hidden {
+    display: none;
+}
+
+/* Smooth Fade-in Animation */
+.fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Show sections when scrolling */
-section.fade-in {
+.fade-in.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Project Cards */
-.project {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Contact Links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 123, 255, 0.9);
-    color: white;
-}
-
-/* Download Resume Button */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #0056b3;
-}
-
 /* Dark Mode Styles */
 body.dark-mode {
-    background: #121212 url('https://github.com/Srinivas0807/srinivas-portfolio/blob/main/Screenshot%202025-02-14%20161602.png?raw=true') no-repeat center center/cover;
+    background: #121212;
     color: #ffffff;
 }
 
-/* Dark Mode Header */
 body.dark-mode header {
-    background: rgba(31, 31, 31, 0.9);
+    background: #1f1f1f;
 }
 
-/* Dark Mode Sections */
-body.dark-mode section {
-    background: rgba(34, 34, 34, 0.9);  
-    color: #ffffff;    
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-}
-
-/* Dark Mode Fix for Text */
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode p {
-    color: #ffffff;  
-}
-
-/* Dark Mode for Project Cards */
 body.dark-mode .project {
-    background: rgba(51, 51, 51, 0.9);
+    background: #333;
     color: white;
-    border: 1px solid #444;
-}
-
-/* Dark Mode for Navigation */
-body.dark-mode nav ul li a {
-    color: #ffffff;
-}
-
-/* Dark Mode for Buttons */
-body.dark-mode .btn {
-    background: #ffffff;
-    color: #007bff;
-}
-
-body.dark-mode .btn:hover {
-    background: #e0e0e0;
-}
-
-/* Dark Mode Footer */
-body.dark-mode footer {
-    background: rgba(31, 31, 31, 0.9);
-    color: #ffffff;
-}
-
-/* Dark Mode Toggle Button */
-#dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 15px;
-    background: #ffffff;
-    color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#dark-mode-toggle:hover {
-    background: #e0e0e0;
-}
-
-body.dark-mode #dark-mode-toggle {
-    background: #007bff;
-    color: white;
-}
-
-body.dark-mode #dark-mode-toggle:hover {
-    background: #0056b3;
 }
