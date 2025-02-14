@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+    // Dark Mode Toggle
     const darkModeToggle = document.getElementById("dark-mode-toggle");
     const body = document.body;
 
-    // Check if dark mode was previously enabled
+    // Check for saved dark mode preference
     if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
     }
@@ -10,11 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
     darkModeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
-        // Save the user's preference in localStorage
+        // Save user preference
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
         } else {
-            localStorage.removeItem("darkMode");
+            localStorage.setItem("darkMode", "disabled");
         }
     });
+
+    // Section Animations
+    const sections = document.querySelectorAll("section");
+
+    function revealSections() {
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight - 100) {
+                section.classList.add("active");
+            }
+        });
+    }
+
+    // Trigger animations on page load and scroll
+    revealSections();
+    window.addEventListener("scroll", revealSections);
 });
