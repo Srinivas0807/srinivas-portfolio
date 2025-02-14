@@ -1,22 +1,25 @@
 // Welcome Page Transition
 document.getElementById("next-button").addEventListener("click", function() {
-    document.getElementById("welcome-screen").style.display = "none"; // Hide welcome screen
-    document.getElementById("main-content").classList.remove("hidden"); // Show main content
-    document.getElementById("main-content").classList.add("fade-in", "show"); // Add fade-in effect
+    document.getElementById("welcome-screen").style.display = "none"; // Hide Welcome Page
+    let mainContent = document.getElementById("main-content");
+    mainContent.classList.add("show"); // Show Portfolio with Fade-In Effect
 });
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
+// Check if dark mode is already enabled in local storage
 if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
 }
 
+// Dark mode toggle event
 if (darkModeToggle) {
     darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
 
+        // Save dark mode state in local storage
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'enabled');
         } else {
@@ -25,7 +28,7 @@ if (darkModeToggle) {
     });
 }
 
-// Fade-In Animation on Scroll
+// Section Fade-In Animation on Scroll
 const sections = document.querySelectorAll('section');
 
 const fadeInOnScroll = () => {
@@ -34,10 +37,14 @@ const fadeInOnScroll = () => {
         const windowHeight = window.innerHeight;
 
         if (sectionTop < windowHeight * 0.85) {
-            section.classList.add('fade-in', 'show');
+            section.classList.add('fade-in');
+            section.classList.add('show'); // Add show class to trigger animation
         }
     });
 };
 
+// Run the animation function when scrolling
 window.addEventListener('scroll', fadeInOnScroll);
+
+// Trigger the animation on page load
 fadeInOnScroll();
