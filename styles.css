@@ -3,14 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #f4f4f4 url('https://github.com/Srinivas0807/srinivas-portfolio/blob/main/Screenshot%202025-02-14%20161602.png?raw=true') no-repeat center center/cover;
     color: #333;
     transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
 header {
-    background: #007bff;
+    background: rgba(0, 123, 255, 0.9); /* Semi-transparent blue */
     color: white;
     text-align: center;
     padding: 20px;
@@ -39,7 +39,7 @@ section {
     padding: 20px;
     max-width: 800px;
     margin: auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -55,7 +55,7 @@ section.fade-in {
 
 /* Project Cards */
 .project {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
@@ -72,7 +72,7 @@ a {
 footer {
     text-align: center;
     padding: 10px;
-    background: #007bff;
+    background: rgba(0, 123, 255, 0.9);
     color: white;
 }
 
@@ -95,18 +95,18 @@ footer {
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background: #121212;
+    background: #121212 url('https://github.com/Srinivas0807/srinivas-portfolio/blob/main/Screenshot%202025-02-14%20161602.png?raw=true') no-repeat center center/cover;
     color: #ffffff;
 }
 
 /* Dark Mode Header */
 body.dark-mode header {
-    background: #1f1f1f;
+    background: rgba(31, 31, 31, 0.9);
 }
 
 /* Dark Mode Sections */
 body.dark-mode section {
-    background: #222;  
+    background: rgba(34, 34, 34, 0.9);  
     color: #ffffff;    
     border-radius: 8px;
     padding: 20px;
@@ -123,7 +123,7 @@ body.dark-mode p {
 
 /* Dark Mode for Project Cards */
 body.dark-mode .project {
-    background: #333;
+    background: rgba(51, 51, 51, 0.9);
     color: white;
     border: 1px solid #444;
 }
@@ -145,7 +145,7 @@ body.dark-mode .btn:hover {
 
 /* Dark Mode Footer */
 body.dark-mode footer {
-    background: #1f1f1f;
+    background: rgba(31, 31, 31, 0.9);
     color: #ffffff;
 }
 
