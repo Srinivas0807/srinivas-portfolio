@@ -1,39 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-    // Check for saved dark mode preference
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
+// Check if dark mode is already enabled in local storage
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+// Dark mode toggle event
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Save dark mode state in local storage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
     }
+});
 
-    darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+// Section Fade-In Animation on Scroll
+const sections = document.querySelectorAll('section');
 
-        // Save user preference
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
+const fadeInOnScroll = () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.85) {
+            section.classList.add('fade-in');
         }
     });
+};
 
-    // Section Animations
-    const sections = document.querySelectorAll("section");
+// Run the animation function when scrolling
+window.addEventListener('scroll', fadeInOnScroll);
 
-    function revealSections() {
-        sections.forEach((section) => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight - 100) {
-                section.classList.add("active");
-            }
-        });
-    }
-
-    // Trigger animations on page load and scroll
-    revealSections();
-    window.addEventListener("scroll", revealSections);
-});
+// Trigger the animation on page load
+fadeInOnScroll();
