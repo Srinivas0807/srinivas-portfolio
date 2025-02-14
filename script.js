@@ -1,8 +1,12 @@
 // Welcome Page Transition
 document.getElementById("next-button").addEventListener("click", function() {
     document.getElementById("welcome-screen").style.display = "none"; // Hide Welcome Page
+    
     let mainContent = document.getElementById("main-content");
-    mainContent.classList.add("show"); // Show Portfolio with Fade-In Effect
+    mainContent.style.display = "block"; // Ensure it's visible
+    setTimeout(() => {
+        mainContent.classList.add("show"); // Trigger animation
+    }, 100); // Small delay to allow CSS transition to work
 });
 
 // Dark Mode Toggle
