@@ -1,7 +1,13 @@
 // Welcome Page Transition
 document.getElementById("next-button").addEventListener("click", function() {
-    document.getElementById("welcome-screen").style.display = "none";
-    document.getElementById("main-content").classList.remove("hidden");
+    let welcomeScreen = document.getElementById("welcome-screen");
+    welcomeScreen.classList.add("fade-out"); // Smooth fade-out effect
+
+    // Hide the welcome screen after animation completes
+    setTimeout(() => {
+        welcomeScreen.style.display = "none";
+        document.getElementById("main-content").classList.remove("hidden");
+    }, 800);
 });
 
 // Dark Mode Toggle
