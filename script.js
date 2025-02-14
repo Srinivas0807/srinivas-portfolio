@@ -1,37 +1,31 @@
 // Welcome Page Transition
 document.getElementById("next-button").addEventListener("click", function() {
-    let welcomeScreen = document.getElementById("welcome-screen");
-    welcomeScreen.classList.add("fade-out"); // Smooth fade-out effect
-
-    // Hide the welcome screen after animation completes
-    setTimeout(() => {
-        welcomeScreen.style.display = "none";
-        document.getElementById("main-content").classList.remove("hidden");
-    }, 800);
+    document.getElementById("welcome-screen").style.display = "none"; // Hide welcome screen
+    document.getElementById("main-content").classList.remove("hidden"); // Show main content
+    document.getElementById("main-content").classList.add("fade-in", "show"); // Add fade-in effect
 });
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
-// Check if dark mode is already enabled in local storage
 if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
 }
 
-// Dark mode toggle event
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
 
-    // Save dark mode state in local storage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
-        localStorage.setItem('darkMode', 'disabled');
-    }
-});
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+}
 
-// Section Fade-In Animation on Scroll
+// Fade-In Animation on Scroll
 const sections = document.querySelectorAll('section');
 
 const fadeInOnScroll = () => {
@@ -40,14 +34,10 @@ const fadeInOnScroll = () => {
         const windowHeight = window.innerHeight;
 
         if (sectionTop < windowHeight * 0.85) {
-            section.classList.add('fade-in');
-            section.classList.add('show'); // Add show class to trigger animation
+            section.classList.add('fade-in', 'show');
         }
     });
 };
 
-// Run the animation function when scrolling
 window.addEventListener('scroll', fadeInOnScroll);
-
-// Trigger the animation on page load
 fadeInOnScroll();
