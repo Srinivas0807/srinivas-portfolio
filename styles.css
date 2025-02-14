@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Welcome Screen */
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.8s ease-in-out;
 }
 
 #welcome-screen h1 {
@@ -43,6 +45,12 @@ body {
 /* Hide Main Content Initially */
 .hidden {
     display: none;
+}
+
+/* Smooth Fade-out for Welcome Screen */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
 /* Smooth Fade-in Animation */
@@ -70,4 +78,27 @@ body.dark-mode header {
 body.dark-mode .project {
     background: #333;
     color: white;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    background: #0056b3;
+}
+
+/* Dark Mode Fix for Button */
+body.dark-mode #dark-mode-toggle {
+    background: white;
+    color: #007bff;
 }
